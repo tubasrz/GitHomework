@@ -1,3 +1,161 @@
 ********************* Git Class 03 ***********************
 Git:
-Git is
+Git is a version control system , that helps us to keep track and backup  our project!
+
+Github:
+Github is a remote location where we can have our backed up codes safe for future references.
+We can work in collaboration on the same project!
+
+what is a local Repo:
+a repo is a storage area, and by local it means it is on our system
+
+what is a remote repo:
+a storage area, and by remote means it is on the internet!
+
+
+Tracking our first project using GIT:
+
+Create a new project in intellij and in order to start tracking it follow the following steps:
+
+1.Find the location of your project.(in intellij the path is written in front of project name,
+  you can also right click on project name and the click on open in explorer)
+2.Decide the location where you want to create your project.(please do not create a repo within a repo!!!)
+3.Navigate your terminal to the location of your project.
+
+initializing the repo:
+1. git init
+
+****3-stage architecture:
+Working directory : all the files that you have in your project
+Staging area: An area between repo and working directory , here the snapshot of all the files are moved
+  before actually moving them to repo.
+Repo: Our actual storage area.
+
+
+2.git status :
+tells the status of repo,
+.untracked files
+.files that are in staging area but not in repo yet!
+.it doesn't tell us about files in staging area which are also in repo!
+.untracked appears in RED
+.tracked --> the one in staging area appears in Green color
+
+3.Git add .
+adds everything to the staging area
+
+4.Git commit -m "commit message"
+send everything in the staging area to the repo
+
+
+
+Github:
+for each local repo your must have a unique individual remote repo!!!
+
+1.create a new Remote repo.
+2.On your terminal  git remote -v to check for any connections (if empty shows no connection yet)
+3.git remote add origin URL
+4.git branch -M main (naming your branch)
+
+you need to do all these steps Only once after creation of a new repo!
+after that you do not need them unless
+you want to change your connection.
+
+5.git push -u origin main --> use it first time only
+6.after that u can do git push only
+
+
+git remote remove origin
+to remove the connection of local with remote
+
+use git add filename to add just your desired file in staging area
+
+
+git log--> shows u all the commits in your local repo
+Head--> points to the latest commit that is present in your working directory.
+origin/main --?points to the commit in your local repo uptil which your remote repo is synchronised
+
+Extra git commands:
+1.git ls-files:
+shows u the files that are present in the staging area.
+
+
+*you can not overwrite a file in staging area. git is going to tell that hey u already have some changes in your
+staging area that needs to be in the repo.
+
+2.git rm --cached filename:
+removes the files from the staging area.
+
+
+3.git diff:
+shows u the difference between the files in working directory and the staging area!!!
+
+4.git diff --cached.
+shows the difference between the files in repo and the staging area!!!!!
+
+5.git restore .:
+to move your files from staging area to working directory
+
+
+gitignore:
+helps u ignore the files/folders that u don't want to track
+remember !!!!! if you are already tracking that file/folder , .gitignore will not ignore it
+that why if u want to ignore a file/folder do it at the very start , before adding that folder in staging area
+
+1. touch .gitignore
+2. open this file add the name of the file or folder u want to ignore
+3.save the .gitignore file
+
+you will not see it any more in git status
+
+
+to get code from a remote repo:
+1.clone
+2.download
+
+the difference is that if u download the code u just download the latest commit that is there
+but when u clone it , it download the whole repo along with that. (all previous commits are also included).
+
+if u clone u can update the repo using git commands
+if u download u can not update the repo!
+
+Git clone:
+git clone URL
+make sure url is Https not "SSH".
+
+
+git fetch:
+tells u if there is any update in remote repo.
+
+git pull:
+it will download the latest updates from the remote repo
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

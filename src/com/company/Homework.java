@@ -6,9 +6,14 @@ public class Homework {
 
         System.out.println("Homework 1");
 
-        for(int i=0; i<=100; i++){
+        for(int i=1; i<=100; i++){
             System.out.println(i +" ");
         }
 
+        System.out.println("Homework 2");
+
+        for(int a=1; a<=50;a++){
+            System.out.println(a+" ");
+        }
     }
 }
